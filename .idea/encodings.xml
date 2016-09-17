@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/AddressMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/CartMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/GoodsMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/OdMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/OderMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/TagsMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/mapper/UserMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/Address.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/AddressExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/Cart.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/CartExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/CartKey.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/Goods.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/GoodsExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/Od.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/OdExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/OdKey.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/Oder.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/OderExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/Tags.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/TagsExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/User.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ourshop/model/UserExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/AddressMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/CartMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/GoodsMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/OdMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/OderMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/TagsMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" charset="GBK" />
+  </component>
+</project>

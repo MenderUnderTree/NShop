@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - shop@localhost" uuid="9160b895-da09-44bd-8ad8-3a7e8323d184">
+    <database-info product="MySQL" version="5.7.12-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="shop"/>
+    <table name="address" schema="" catalog="shop" type="TABLE">
+      <column name="adressID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="adressID"/>
+      <foreign-key name="FK_Relationship_1" columns="uid" ref-table="user" ref-schema="" ref-catalog="shop" ref-columns="uid" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_Relationship_6" table="oder" schema="" catalog="shop" columns="adressID"/>
+      <index name="FK_Relationship_1" unique="false" columns="uid"/>
+    </table>
+    <table name="cart" schema="" catalog="shop" type="TABLE">
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="gID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="num" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="uid,gID"/>
+      <foreign-key name="FK_Relationship_8" columns="uid" ref-table="user" ref-schema="" ref-catalog="shop" ref-columns="uid" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Relationship_9" columns="gID" ref-table="goods" ref-schema="" ref-catalog="shop" ref-columns="gID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_Relationship_9" unique="false" columns="gID"/>
+    </table>
+    <table name="goods" schema="" catalog="shop" type="TABLE">
+      <column name="gID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tagID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="fimageURL" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="price" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="dis" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="stock" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="gName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="gID"/>
+      <foreign-key name="FK_Relationship_5" columns="tagID" ref-table="tags" ref-schema="" ref-catalog="shop" ref-columns="tagID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_Relationship_9" table="cart" schema="" catalog="shop" columns="gID"/>
+      <exported-key name="FK_Relationship_3" table="od" schema="" catalog="shop" columns="gID"/>
+      <index name="FK_Relationship_5" unique="false" columns="tagID"/>
+    </table>
+    <table name="od" schema="" catalog="shop" type="TABLE">
+      <column name="gID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="OID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="gNum" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="gID,OID"/>
+      <foreign-key name="FK_Relationship_3" columns="gID" ref-table="goods" ref-schema="" ref-catalog="shop" ref-columns="gID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Relationship_4" columns="OID" ref-table="oder" ref-schema="" ref-catalog="shop" ref-columns="OID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_Relationship_4" unique="false" columns="OID"/>
+    </table>
+    <table name="oder" schema="" catalog="shop" type="TABLE">
+      <column name="OID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="adressID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="state" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="OID"/>
+      <foreign-key name="FK_Relationship_6" columns="adressID" ref-table="address" ref-schema="" ref-catalog="shop" ref-columns="adressID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Relationship_7" columns="uid" ref-table="user" ref-schema="" ref-catalog="shop" ref-columns="uid" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_Relationship_4" table="od" schema="" catalog="shop" columns="OID"/>
+      <index name="FK_Relationship_6" unique="false" columns="adressID"/>
+      <index name="FK_Relationship_7" unique="false" columns="uid"/>
+    </table>
+    <table name="tags" schema="" catalog="shop" type="TABLE">
+      <column name="tagID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tagName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="tagID"/>
+      <exported-key name="FK_Relationship_5" table="goods" schema="" catalog="shop" columns="tagID"/>
+    </table>
+    <table name="user" schema="" catalog="shop" type="TABLE">
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uemail" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uname" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="pwd" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uid"/>
+      <exported-key name="FK_Relationship_1" table="address" schema="" catalog="shop" columns="uid"/>
+      <exported-key name="FK_Relationship_8" table="cart" schema="" catalog="shop" columns="uid"/>
+      <exported-key name="FK_Relationship_7" table="oder" schema="" catalog="shop" columns="uid"/>
+    </table>
+  </data-source>
+</component>
